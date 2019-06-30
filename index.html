@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Code 4 Kids</title>
+    <link href="https://vjs.zencdn.net/7.5.4/video-js.css" rel="stylesheet">
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Playfair+Display:400,400i,700,700i,900,900i&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <!-- Navigation Bar -->
+        
+        <div id="nav-bar" class="clearfix">
+            <div id="logo-container">
+                <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56">
+                    <defs>
+                        <style>
+                            .a {
+                                fill: #1d00ff;
+                            }
+                        </style>
+                    </defs>
+                    <g transform="translate(23.45 0.467)">
+                        <path class="logo"
+                            d="M222.25,30.5a5.25,5.25,0,1,1,5.25-5.25A5.256,5.256,0,0,1,222.25,30.5Zm0-8.167a2.917,2.917,0,1,0,2.917,2.917A2.92,2.92,0,0,0,222.25,22.333Z"
+                            transform="translate(-217 -20)" />
+                    </g>
+                    <g transform="translate(45.5 23.333)">
+                        <path class="logo"
+                            d="M411.25,226.5a5.25,5.25,0,1,1,5.25-5.25A5.256,5.256,0,0,1,411.25,226.5Zm0-8.167a2.917,2.917,0,1,0,2.917,2.917A2.92,2.92,0,0,0,411.25,218.333Z"
+                            transform="translate(-406 -216)" />
+                    </g>
+                    <g transform="translate(23.333 44.8)">
+                        <path class="logo"
+                            d="M221.25,410.5a5.25,5.25,0,1,1,5.25-5.25A5.256,5.256,0,0,1,221.25,410.5Zm0-8.167a2.917,2.917,0,1,0,2.917,2.917A2.92,2.92,0,0,0,221.25,402.333Z"
+                            transform="translate(-216 -400)" />
+                    </g>
+                    <g transform="translate(0 22.633)">
+                        <path class="logo"
+                            d="M21.25,220.5a5.25,5.25,0,1,1,5.25-5.25A5.256,5.256,0,0,1,21.25,220.5Zm0-8.167a2.917,2.917,0,1,0,2.917,2.917A2.92,2.92,0,0,0,21.25,212.333Z"
+                            transform="translate(-16 -210)" />
+                    </g>
+                    <path class="logo"
+                        d="M44,72a27.844,27.844,0,0,1-15.864-4.924,1.167,1.167,0,1,1,1.323-1.922,25.67,25.67,0,1,0,27.107-43.54,1.167,1.167,0,0,1,1.144-2.034A28,28,0,0,1,44,72ZM24.389,63.481a1.163,1.163,0,0,1-.852-.369l-.084-.091a1.167,1.167,0,1,1,1.714-1.584l.074.08a1.166,1.166,0,0,1-.852,1.964ZM20.84,58.725a1.166,1.166,0,0,1-1.007-.576A28,28,0,0,1,44,16c.676,0,1.359.024,2.03.073a1.167,1.167,0,1,1-.167,2.327c-.616-.044-1.243-.067-1.863-.067A25.673,25.673,0,0,0,21.845,56.967a1.167,1.167,0,0,1-1.005,1.757ZM51.785,19.48a1.163,1.163,0,0,1-.338-.05l-.107-.032a1.167,1.167,0,1,1,.667-2.236l.116.035a1.167,1.167,0,0,1-.338,2.284Z"
+                        transform="translate(-16 -16)" />
+                    <g transform="translate(8.633 8.828)">
+                        <path class="logo"
+                            d="M123.056,129.777H95.444A5.451,5.451,0,0,1,90,124.333v-24a1.167,1.167,0,1,1,2.333,0v24a3.115,3.115,0,0,0,3.111,3.111h27.611a1.165,1.165,0,0,1,.915.442,1.165,1.165,0,0,1,.587-.828l.073-.042a1.167,1.167,0,0,1,1.184,2.011l-.129.074a1.167,1.167,0,0,1-1.478-.3A1.167,1.167,0,0,1,123.056,129.777Zm4.278-5.661a1.167,1.167,0,0,1-1.167-1.167V97.11A3.115,3.115,0,0,0,123.056,94H97.284a1.167,1.167,0,1,1,0-2.333h25.772A5.451,5.451,0,0,1,128.5,97.11V122.95A1.167,1.167,0,0,1,127.333,124.116Zm-35.4-28.291a1.167,1.167,0,0,1-.955-1.836q.043-.061.087-.12a1.167,1.167,0,0,1,1.875,1.389l-.05.069A1.165,1.165,0,0,1,91.937,95.826Z"
+                            transform="translate(-90 -91.666)" />
+                    </g>
+                    <g transform="translate(22.167 17.967)">
+                        <path class="logo"
+                            d="M207.165,188.666a1.167,1.167,0,0,1-.98-1.8c3.537-5.5,10.272-15.969,10.486-16.311a1.167,1.167,0,0,1,2,1.209c-.117.195-8.081,12.575-10.519,16.364A1.166,1.166,0,0,1,207.165,188.666Z"
+                            transform="translate(-206 -169.999)" />
+                    </g>
+                    <g transform="translate(33.833 21.467)">
+                        <path class="logo"
+                            d="M307.167,212.834a1.167,1.167,0,0,1-.648-2.137l5.816-3.877-4.827-4.827a1.167,1.167,0,0,1,1.65-1.65l5.833,5.833a1.167,1.167,0,0,1-.178,1.8l-7,4.667A1.162,1.162,0,0,1,307.167,212.834Z"
+                            transform="translate(-306 -200)" />
+                    </g>
+                    <g transform="translate(12.833 21.466)">
+                        <path class="logo"
+                            d="M133,212.832a1.163,1.163,0,0,1-.825-.342l-5.833-5.833a1.167,1.167,0,0,1,.178-1.8l7-4.667a1.167,1.167,0,1,1,1.294,1.941L129,206.013l4.827,4.827a1.167,1.167,0,0,1-.825,1.992Z"
+                            transform="translate(-126 -199.998)" />
+                    </g>
+                </svg>
+            </div>
+
+            <button class="hamburger">&#9776;</button>
+        <button class="cross">&#735;</button>
+        <div class="navi">
+            <ul>
+                <li>
+                    <a href="#">Over Ons</a>
+                </li>
+                <li>
+                    <a href="#">Lesmateriaal</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+            <div class="menu">
+            <ul>
+                <li>
+                    <a href="#">Over Ons</a>
+                </li>
+                <li>
+                    <a href="#">Lesmateriaal</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- Gradient Header -->
+        <div class="header-image-container">
+            <div class="overlay-container">
+                <h1 id="overlay-title">Van beginner naar expert <br>Het lesmateriaal brengt je verder</h1>
+                <h2 id="overlay-sub-title">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis
+                    vestibulum. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies
+                    vehicula ut id elit. Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel
+                    augue laoreet rutrum faucibus dolor auctor.</h2>
+            </div>
+        </div>
+    </header>
+    <!-- Content Section -->
+    <main>
+        <div id="accordion-container">
+            <div id="content-container">
+                <h4 id="accordion-title"> Playlist</h4>
+                <div id="accordion">
+                    <!-- AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -->
+                    <div class="accordionheader">
+                        <h3>
+                            Algemene introductie
+                        </h3>
+                        <div class="arrow-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="29.941" height="29.941"
+                                viewBox="0 0 29.941 29.941">
+                                <path d="M2.828,2.828,24,0,21.172,21.172Z"
+                                    transform="translate(12.971 -2) rotate(45)" /></svg>
+                        </div>
+                        <div class="intro-tag">
+                            <p>INTRO</p>
+                        </div>
+                        <div class="done-tag">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="33.83" height="23.677"
+                                viewBox="0 0 33.83 23.677">
+                                <path id="Path_20" data-name="Path 20" class="cls-1"
+                                    d="M21.5,45.013a1.73,1.73,0,0,0,1.18.463,1.594,1.594,0,0,0,1.18-.506L44.124,24.707a1.7,1.7,0,0,0-2.4-2.4L22.68,41.432l-8.973-8.973a1.7,1.7,0,0,0-2.4,2.4Z"
+                                    transform="translate(-10.8 -21.8)" />
+                            </svg>
+                        </div>
+
+                        
+
+                    </div>
+                    <div class="accordionbody">
+                        <video class="video-js vjs-playing" controls>
+                            <source src="mp4/small.mp4" type="video/mp4">
+                        </video>
+
+                        <h3 class="inner-title">Algemene Introductie</h3>
+                        <a href="#" class="player-btn rewindknop">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="35.323" height="23.323" viewBox="0 0 35.323 23.323">
+                                <g id="rewind" clip-path="url(#clip-path)">
+                                    <path id="Path_22" data-name="Path 22" d="M0,2.2,16.492,0l-2.2,16.492Z"
+                                        transform="translate(11.662 23.323) rotate(-135)" />
+                                    <path id="Path_23" data-name="Path 23" d="M0,2.2,16.492,0l-2.2,16.492Z"
+                                        transform="translate(23.662 23.323) rotate(-135)" />
+                                </g>
+                            </svg>
+                        </a>
+                        <a href="#" class="player-btn done">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="33.83" height="23.677"
+                                viewBox="0 0 33.83 23.677">
+                                <path id="Path_20" data-name="Path 20" class="cls-1"
+                                    d="M21.5,45.013a1.73,1.73,0,0,0,1.18.463,1.594,1.594,0,0,0,1.18-.506L44.124,24.707a1.7,1.7,0,0,0-2.4-2.4L22.68,41.432l-8.973-8.973a1.7,1.7,0,0,0-2.4,2.4Z"
+                                    transform="translate(-10.8 -21.8)" />
+                            </svg>
+                        </a>
+
+                        <a class="big-pause-button" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="37" viewBox="0 0 30 37">
+                                <g id="pause" class="cls-2">
+                                  <rect id="Rectangle_13" data-name="Rectangle 13" class="cls-3" width="13" height="37"/>
+                                  <rect id="Rectangle_14" data-name="Rectangle 14" class="cls-3" width="13" height="37" transform="translate(17)"/>
+                                </g>
+                              </svg>
+                            </a>
+
+                            <a class="big-play-button" type="button">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="47.153" height="47.153" viewBox="0 0 47.153 47.153">
+                                    <g id="play" class="cls-2">
+                                      <g id="Repeat_Grid_1" data-name="Repeat Grid 1" class="cls-2">
+                                        <g transform="translate(-806.147 -1028.581)">
+                                          <path id="Path_13" data-name="Path 13" class="cls-3" d="M0,4.454,33.342,0,28.888,33.342Z" transform="translate(829.724 1028.581) rotate(45)"/>
+                                        </g>
+                                      </g>
+                                    </g>
+                                  </svg>
+                                </a>
+
+                    </div>
+
+                    <!-- AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -->
+                    <div class="accordionheader">
+                        <h3>
+                            Workshop 1: Kleuren met code
+                        </h3>
+                        <div class="arrow-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="29.941" height="29.941"
+                                viewBox="0 0 29.941 29.941">
+                                <path d="M2.828,2.828,24,0,21.172,21.172Z"
+                                    transform="translate(12.971 -2) rotate(45)" /></svg>
+                        </div>
+                        <div class="video-tag">
+                            <p>WORKSHOP</p>
+                        </div>
+                        <div class="done-tag">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="33.83" height="23.677"
+                            viewBox="0 0 33.83 23.677">
+                            <path id="Path_20" data-name="Path 20" class="cls-1"
+                                d="M21.5,45.013a1.73,1.73,0,0,0,1.18.463,1.594,1.594,0,0,0,1.18-.506L44.124,24.707a1.7,1.7,0,0,0-2.4-2.4L22.68,41.432l-8.973-8.973a1.7,1.7,0,0,0-2.4,2.4Z"
+                                transform="translate(-10.8 -21.8)" />
+                        </svg>
+                        
+                    </div>
+
+                    <a class="download clearfix">
+                        <p>DOWNLOAD</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20.618" height="19.572" viewBox="0 0 20.618 19.572">
+                            <g id="Group_30" data-name="Group 30" transform="translate(-844.191 -1351.579)">
+                              <path id="Path_24" data-name="Path 24" class="cls-1" d="M-97.94-22.478a.6.6,0,0,0,.2.139.6.6,0,0,0,.233.046.593.593,0,0,0,.23-.046.588.588,0,0,0,.2-.132l5.8-5.8a.608.608,0,0,0,0-.856.622.622,0,0,0-.858,0L-96.9-24.363v-15.49a.607.607,0,0,0-.606-.606.607.607,0,0,0-.606.606v15.489l-4.761-4.762a.621.621,0,0,0-.858,0,.607.607,0,0,0,0,.857Z" transform="translate(952.004 1392.038)"/>
+                              <path id="Path_25" data-name="Path 25" class="cls-1" d="M-100,17.486a.607.607,0,0,0-.606.606v3.7H-118.8v-3.7a.607.607,0,0,0-.606-.606.607.607,0,0,0-.606.606v4.3a.607.607,0,0,0,.606.606H-100a.607.607,0,0,0,.606-.606v-4.3A.607.607,0,0,0-100,17.486Z" transform="translate(964.203 1348.149)"/>
+                            </g>
+                          </svg>
+                    </a>
+                    </div>
+                    <div class="accordionbody">
+                        <video class="video-js" controls>
+                            <source src="mp4/small.mp4" type="video/mp4">
+                        </video>
+                        <h3 class="inner-title">Workshop 1: Kleuren met code</h3>
+                        <a href="#" class="player-btn rewindknop">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="35.323" height="23.323" viewBox="0 0 35.323 23.323">
+                                <g id="rewind" clip-path="url(#clip-path)">
+                                    <path id="Path_22" data-name="Path 22" d="M0,2.2,16.492,0l-2.2,16.492Z"
+                                        transform="translate(11.662 23.323) rotate(-135)" />
+                                    <path id="Path_23" data-name="Path 23" d="M0,2.2,16.492,0l-2.2,16.492Z"
+                                        transform="translate(23.662 23.323) rotate(-135)" />
+                                </g>
+                            </svg>
+                        </a>
+                        <a href="#" class="player-btn done">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="33.83" height="23.677"
+                                viewBox="0 0 33.83 23.677">
+                                <path id="Path_20" data-name="Path 20" class="cls-1"
+                                    d="M21.5,45.013a1.73,1.73,0,0,0,1.18.463,1.594,1.594,0,0,0,1.18-.506L44.124,24.707a1.7,1.7,0,0,0-2.4-2.4L22.68,41.432l-8.973-8.973a1.7,1.7,0,0,0-2.4,2.4Z"
+                                    transform="translate(-10.8 -21.8)" />
+                            </svg>
+                        </a>
+                        <a class="big-pause-button" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="37" viewBox="0 0 30 37">
+                                <g id="pause" class="cls-2">
+                                  <rect id="Rectangle_13" data-name="Rectangle 13" class="cls-3" width="13" height="37"/>
+                                  <rect id="Rectangle_14" data-name="Rectangle 14" class="cls-3" width="13" height="37" transform="translate(17)"/>
+                                </g>
+                              </svg>
+                            </a>
+
+                            <a class="big-play-button" type="button">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="47.153" height="47.153" viewBox="0 0 47.153 47.153">
+                                    <g id="play" class="cls-2">
+                                      <g id="Repeat_Grid_1" data-name="Repeat Grid 1" class="cls-2">
+                                        <g transform="translate(-806.147 -1028.581)">
+                                          <path id="Path_13" data-name="Path 13" class="cls-3" d="M0,4.454,33.342,0,28.888,33.342Z" transform="translate(829.724 1028.581) rotate(45)"/>
+                                        </g>
+                                      </g>
+                                    </g>
+                                  </svg>
+                                </a>
+                    </div>
+                    <!-- AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -->
+                    <div class="accordionheader">
+                        <h3>
+                            Workshop 2: Vormen maken
+                        </h3>
+                        <div class="arrow-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="29.941" height="29.941"
+                                viewBox="0 0 29.941 29.941">
+                                <path d="M2.828,2.828,24,0,21.172,21.172Z"
+                                    transform="translate(12.971 -2) rotate(45)" /></svg>
+                        </div>
+                        <div class="video-tag">
+                            <p>WORKSHOP</p>
+                        </div>
+                        <div class="done-tag">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="33.83" height="23.677"
+                            viewBox="0 0 33.83 23.677">
+                            <path id="Path_20" data-name="Path 20" class="cls-1"
+                                d="M21.5,45.013a1.73,1.73,0,0,0,1.18.463,1.594,1.594,0,0,0,1.18-.506L44.124,24.707a1.7,1.7,0,0,0-2.4-2.4L22.68,41.432l-8.973-8.973a1.7,1.7,0,0,0-2.4,2.4Z"
+                                transform="translate(-10.8 -21.8)" />
+                        </svg>
+                    </div>
+
+                    
+                    </div>
+                    <div class="accordionbody">
+                        <video class="video-js " controls>
+                            <source src="mp4/small.mp4" type="video/mp4">
+                        </video>
+                        <h3 class="inner-title">Workshop 2: Vormen maken</h3>
+                        <a href="#" class="player-btn rewindknop">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="35.323" height="23.323" viewBox="0 0 35.323 23.323">
+                                <g id="rewind" clip-path="url(#clip-path)">
+                                    <path id="Path_22" data-name="Path 22" d="M0,2.2,16.492,0l-2.2,16.492Z"
+                                        transform="translate(11.662 23.323) rotate(-135)" />
+                                    <path id="Path_23" data-name="Path 23" d="M0,2.2,16.492,0l-2.2,16.492Z"
+                                        transform="translate(23.662 23.323) rotate(-135)" />
+                                </g>
+                            </svg>
+                        </a>
+                        <a href="#" class="player-btn done">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="33.83" height="23.677"
+                                viewBox="0 0 33.83 23.677">
+                                <path id="Path_20" data-name="Path 20" class="cls-1"
+                                    d="M21.5,45.013a1.73,1.73,0,0,0,1.18.463,1.594,1.594,0,0,0,1.18-.506L44.124,24.707a1.7,1.7,0,0,0-2.4-2.4L22.68,41.432l-8.973-8.973a1.7,1.7,0,0,0-2.4,2.4Z"
+                                    transform="translate(-10.8 -21.8)" />
+                            </svg>
+                        </a>
+
+                        <a class="big-pause-button" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="37" viewBox="0 0 30 37">
+                                <g id="pause" class="cls-2">
+                                  <rect id="Rectangle_13" data-name="Rectangle 13" class="cls-3" width="13" height="37"/>
+                                  <rect id="Rectangle_14" data-name="Rectangle 14" class="cls-3" width="13" height="37" transform="translate(17)"/>
+                                </g>
+                              </svg>
+                            </a>
+
+                            <a class="big-play-button" type="button">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="47.153" height="47.153" viewBox="0 0 47.153 47.153">
+                                    <g id="play" class="cls-2">
+                                      <g id="Repeat_Grid_1" data-name="Repeat Grid 1" class="cls-2">
+                                        <g transform="translate(-806.147 -1028.581)">
+                                          <path id="Path_13" data-name="Path 13" class="cls-3" d="M0,4.454,33.342,0,28.888,33.342Z" transform="translate(829.724 1028.581) rotate(45)"/>
+                                        </g>
+                                      </g>
+                                    </g>
+                                  </svg>
+                                </a>
+                    </div>
+                    <!-- AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -->
+                    <div class="accordionheader">
+                        <h3>
+                            Workshop 3: Beweging
+                        </h3>
+                        <div class="arrow-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="29.941" height="29.941"
+                                viewBox="0 0 29.941 29.941">
+                                <path d="M2.828,2.828,24,0,21.172,21.172Z"
+                                    transform="translate(12.971 -2) rotate(45)" /></svg>
+                        </div>
+                        <div class="video-tag">
+                            <p>WORKSHOP</p>
+                        </div>
+                        <div class="done-tag">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="33.83" height="23.677"
+                            viewBox="0 0 33.83 23.677">
+                            <path id="Path_20" data-name="Path 20" class="cls-1"
+                                d="M21.5,45.013a1.73,1.73,0,0,0,1.18.463,1.594,1.594,0,0,0,1.18-.506L44.124,24.707a1.7,1.7,0,0,0-2.4-2.4L22.68,41.432l-8.973-8.973a1.7,1.7,0,0,0-2.4,2.4Z"
+                                transform="translate(-10.8 -21.8)" />
+                        </svg>
+                    </div>
+                    <a class="download clearfix">
+                        <p>DOWNLOAD</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20.618" height="19.572" viewBox="0 0 20.618 19.572">
+                            <g id="Group_30" data-name="Group 30" transform="translate(-844.191 -1351.579)">
+                              <path id="Path_24" data-name="Path 24" class="cls-1" d="M-97.94-22.478a.6.6,0,0,0,.2.139.6.6,0,0,0,.233.046.593.593,0,0,0,.23-.046.588.588,0,0,0,.2-.132l5.8-5.8a.608.608,0,0,0,0-.856.622.622,0,0,0-.858,0L-96.9-24.363v-15.49a.607.607,0,0,0-.606-.606.607.607,0,0,0-.606.606v15.489l-4.761-4.762a.621.621,0,0,0-.858,0,.607.607,0,0,0,0,.857Z" transform="translate(952.004 1392.038)"/>
+                              <path id="Path_25" data-name="Path 25" class="cls-1" d="M-100,17.486a.607.607,0,0,0-.606.606v3.7H-118.8v-3.7a.607.607,0,0,0-.606-.606.607.607,0,0,0-.606.606v4.3a.607.607,0,0,0,.606.606H-100a.607.607,0,0,0,.606-.606v-4.3A.607.607,0,0,0-100,17.486Z" transform="translate(964.203 1348.149)"/>
+                            </g>
+                          </svg>
+                    </a>
+                    </div>
+                    <div class="accordionbody">
+                        <video class="video-js " controls>
+                            <source src="mp4/small.mp4" type="video/mp4">
+                        </video>
+                        <h3 class="inner-title">Workshop 3: Beweging</h3>
+                        <a href="#" id="rewind" class="player-btn rewindknop">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="35.323" height="23.323" viewBox="0 0 35.323 23.323">
+                                <g id="rewind" clip-path="url(#clip-path)">
+                                    <path id="Path_22" data-name="Path 22" d="M0,2.2,16.492,0l-2.2,16.492Z"
+                                        transform="translate(11.662 23.323) rotate(-135)" />
+                                    <path id="Path_23" data-name="Path 23" d="M0,2.2,16.492,0l-2.2,16.492Z"
+                                        transform="translate(23.662 23.323) rotate(-135)" />
+                                </g>
+                            </svg>
+                        </a>
+                        <a href="#" class="player-btn done">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="33.83" height="23.677"
+                                viewBox="0 0 33.83 23.677">
+                                <path id="Path_20" data-name="Path 20" class="cls-1"
+                                    d="M21.5,45.013a1.73,1.73,0,0,0,1.18.463,1.594,1.594,0,0,0,1.18-.506L44.124,24.707a1.7,1.7,0,0,0-2.4-2.4L22.68,41.432l-8.973-8.973a1.7,1.7,0,0,0-2.4,2.4Z"
+                                    transform="translate(-10.8 -21.8)" />
+                            </svg>
+                        </a>
+                        <a class="big-pause-button" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="37" viewBox="0 0 30 37">
+                                <g id="pause" class="cls-2">
+                                  <rect id="Rectangle_13" data-name="Rectangle 13" class="cls-3" width="13" height="37"/>
+                                  <rect id="Rectangle_14" data-name="Rectangle 14" class="cls-3" width="13" height="37" transform="translate(17)"/>
+                                </g>
+                              </svg>
+                            </a>
+
+                            <a class="big-play-button" type="button">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="47.153" height="47.153" viewBox="0 0 47.153 47.153">
+                                    <g id="play" class="cls-2">
+                                      <g id="Repeat_Grid_1" data-name="Repeat Grid 1" class="cls-2">
+                                        <g transform="translate(-806.147 -1028.581)">
+                                          <path id="Path_13" data-name="Path 13" class="cls-3" d="M0,4.454,33.342,0,28.888,33.342Z" transform="translate(829.724 1028.581) rotate(45)"/>
+                                        </g>
+                                      </g>
+                                    </g>
+                                  </svg>
+                                </a>
+                    </div>
+                    <!-- AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -->
+                    <div class="accordionheader">
+                        <h3>
+                            Workshop 4: Variabelen maken
+                        </h3>
+                        <div class="arrow-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="29.941" height="29.941"
+                                viewBox="0 0 29.941 29.941">
+                                <path d="M2.828,2.828,24,0,21.172,21.172Z"
+                                    transform="translate(12.971 -2) rotate(45)" /></svg>
+                        </div>
+                        <div class="video-tag">
+                            <p>WORKSHOP</p>
+                        </div>
+                        <div class="done-tag">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="33.83" height="23.677"
+                            viewBox="0 0 33.83 23.677">
+                            <path id="Path_20" data-name="Path 20" class="cls-1"
+                                d="M21.5,45.013a1.73,1.73,0,0,0,1.18.463,1.594,1.594,0,0,0,1.18-.506L44.124,24.707a1.7,1.7,0,0,0-2.4-2.4L22.68,41.432l-8.973-8.973a1.7,1.7,0,0,0-2.4,2.4Z"
+                                transform="translate(-10.8 -21.8)" />
+                        </svg>
+                    </div>
+                    </div>
+                    <div class="accordionbody">
+                        <video class="video-js " controls>
+                            <source src="mp4/small.mp4" type="video/mp4">
+                        </video>
+                        <h3 class="inner-title">Workshop 4: Variabelen maken</h3>
+                        <a href="#" class="player-btn rewindknop">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="35.323" height="23.323" viewBox="0 0 35.323 23.323">
+                                <g id="rewind" clip-path="url(#clip-path)">
+                                    <path id="Path_22" data-name="Path 22" d="M0,2.2,16.492,0l-2.2,16.492Z"
+                                        transform="translate(11.662 23.323) rotate(-135)" />
+                                    <path id="Path_23" data-name="Path 23" d="M0,2.2,16.492,0l-2.2,16.492Z"
+                                        transform="translate(23.662 23.323) rotate(-135)" />
+                                </g>
+                            </svg>
+                        </a>
+                        <a href="#" class="player-btn done">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="33.83" height="23.677"
+                                viewBox="0 0 33.83 23.677">
+                                <path id="Path_20" data-name="Path 20" class="cls-1"
+                                    d="M21.5,45.013a1.73,1.73,0,0,0,1.18.463,1.594,1.594,0,0,0,1.18-.506L44.124,24.707a1.7,1.7,0,0,0-2.4-2.4L22.68,41.432l-8.973-8.973a1.7,1.7,0,0,0-2.4,2.4Z"
+                                    transform="translate(-10.8 -21.8)" />
+                            </svg>
+                        </a>
+                        <a class="big-pause-button" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="37" viewBox="0 0 30 37">
+                                <g id="pause" class="cls-2">
+                                  <rect id="Rectangle_13" data-name="Rectangle 13" class="cls-3" width="13" height="37"/>
+                                  <rect id="Rectangle_14" data-name="Rectangle 14" class="cls-3" width="13" height="37" transform="translate(17)"/>
+                                </g>
+                              </svg>
+                            </a>
+
+                            <a class="big-play-button" type="button">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="47.153" height="47.153" viewBox="0 0 47.153 47.153">
+                                    <g id="play" class="cls-2">
+                                      <g id="Repeat_Grid_1" data-name="Repeat Grid 1" class="cls-2">
+                                        <g transform="translate(-806.147 -1028.581)">
+                                          <path id="Path_13" data-name="Path 13" class="cls-3" d="M0,4.454,33.342,0,28.888,33.342Z" transform="translate(829.724 1028.581) rotate(45)"/>
+                                        </g>
+                                      </g>
+                                    </g>
+                                  </svg>
+                                </a>
+                    </div>
+                    <!-- AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -->
+                </div>
+            </div>
+
+
+
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <img src="img/giphy.gif">
+                    <div class="modaltextcont">
+                        <h1 class="modaltitle">Goed gedaan!</h1>
+                        <h2 class="modalsub">Op naar de volgende video!</h2>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -->
+
+
+            <div id="support-container">
+                <h4 id="support-title">Support</h4>
+                <h1 id="support-header">Kom je er niet uit? <br>
+                    Wij helpen je graag verder</h1>
+                <div id="employee-grid" class="clearfix">
+                    <div id="left-column">
+                        <div class="employee clearfix">
+                            <div class="profile-image-1"></div>
+                            <div class="profile-info">
+                                <p class="name"> Klaartje Klaassen</p>
+                                <p class="title"> Hoofd contactpersoon</p>
+                                <a href="#" class="mainbtn"> Email </a>
+                            </div>
+                        </div>
+                        <div class="employee clearfix">
+                            <div class="profile-image-2"></div>
+                            <div class="profile-info">
+                                <p class="name"> Klaartje Klaassen</p>
+                                <p class="title"> Hoofd contactpersoon</p>
+                                <a href="#" class="mainbtn"> Email </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="right-column">
+                        <div class="employee clearfix">
+                            <div class="profile-image-3"></div>
+                            <div class="profile-info">
+                                <p class="name"> Klaartje Klaassen</p>
+                                <p class="title"> Hoofd contactpersoon</p>
+                                <a href="#" class="mainbtn"> Email </a>
+                            </div>
+                        </div>
+                        <div class="employee clearfix">
+                            <div class="profile-image-4"></div>
+                            <div class="profile-info">
+                                <p class="name"> Klaartje Klaassen</p>
+                                <p class="title"> Hoofd contactpersoon</p>
+                                <a href="#" class="mainbtn"> Email </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+        <div id="bottom-image">
+            <div class="bottom-container">
+                <h1 id="overlay-title">Klaar voor de volgende uitdaging?</h1>
+                <h2 id="overlay-sub-title"> In ons expertprogramma vind je lessen voor gevorderden </h2>
+                <a href="" class="bottom-btn"> Kom maar op </a>
+            </div>
+        </div>
+
+    </main>
+    <!-- Footer Section -->
+    <footer class="clearfix">
+        <div class="switch-btn-container clearfix">
+            <div id="white-icon" class="icon"></div>
+            <div id="dark-icon" class="icon"></div>
+            <div id="slider"></div>
+        </div>
+        <p class="switch-text">Switch Theme</p>
+
+    </footer>
+
+
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src='https://vjs.zencdn.net/7.5.4/video.js'></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+</body>
+
+</html>
